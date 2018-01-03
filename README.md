@@ -1,4 +1,4 @@
-# GO code to access (some) Feinstaub sensor APIs
+# Sample GO code to access (some) Feinstaub sensor APIs
 
 
 
