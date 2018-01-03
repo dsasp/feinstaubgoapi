@@ -1,7 +1,7 @@
 # Sample GO code to access (some) Feinstaub sensor APIs
 
-See [opendata-stuttgart](https://github.com/opendata-stuttgart/meta/wiki) for background.
+See [lufdaten.info](http://luftdaten.info) for background information.
 
-See [API info](https://github.com/opendata-stuttgart/meta/wiki/APIs) for details on APIs.
+See [API info](https://github.com/opendata-stuttgart/meta/wiki/APIs) for details on APIs being called by sample Go code.
 
 ## repo is under construction, stay tuned
