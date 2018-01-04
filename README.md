@@ -1,7 +1,12 @@
-# Sample GO code to access (some) Feinstaub sensor APIs
+# GO sample code accessing APIs providing data about fine dust / particulate pollution collected by a network of sensors.
 
-See [lufdaten.info](http://luftdaten.info) for background information.
+Please refer to [luftdaten.info](http://luftdaten.info) for background information.
 
-See [API info](https://github.com/opendata-stuttgart/meta/wiki/APIs) for details on APIs being called by sample Go code.
+See [API info](https://github.com/opendata-stuttgart/meta/wiki/APIs) for details about APIs being used by Go sample code. 
 
-## repo is under construction, stay tuned
+Sample code is available for the following subset of APIs only:
+
+- http://api.luftdaten.info/v1/sensor/{apiID}/ - all measurements of the last 5 minutes for one sensor
+
+
+## repo is under construction
