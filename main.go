@@ -15,7 +15,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/dsap/feinstaubgoapi"
+	fsapi "github.com/dsasp/feinstaubgoapi"
 )
 
 /*
@@ -24,7 +24,7 @@ import (
 */
 func main() {
 
-	var apidata []feinstaubgoapi.APIData
+	var apidata []fsapi.APIData
 	var err error
 
 	// get id of sensor passed as cmd line argument
@@ -39,8 +39,8 @@ func main() {
 	//
 	// Read and print SDS (dust) sensor data
 	//
-	requrl := feinstaubgoapi.UrlSensorAPI_1 + sensorId + "/"
-	apidata, err = feinstaubgoapi.ReadSensor(requrl)
+	requrl := fsapi.UrlSensorAPI_1 + sensorId + "/"
+	apidata, err = fsapi.ReadSensor(requrl)
 	if err != nil {
 		log.Println("Error reading sensor data, url=", requrl, err)
 	}
