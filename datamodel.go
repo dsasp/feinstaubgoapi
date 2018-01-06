@@ -1,5 +1,8 @@
 /*
   Copyright (c) 2018 Dieter Schmidt
+
+	API data structures
+
 */
 
 package feinstaubgoapi

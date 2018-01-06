@@ -1,5 +1,7 @@
 /*
   Copyright (c) 2018 Dieter Schmidt
+
+  Functions to read and display sensor data.
 */
 
 package feinstaubgoapi
