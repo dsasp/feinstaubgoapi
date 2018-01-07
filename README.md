@@ -10,3 +10,10 @@ Sample code is available for the following subset of APIs:
 
 - http://api.luftdaten.info/v1/sensor/{apiID}/ - all measurements of the last 5 minutes for one given sensor
 - more to come
+
+## Usage
+
+- ensure you have Go installed and GOPATH is set 
+- install package `go get github.com/dsasp/feinstaubgoapi`
+- copy `main.go_sample` to your Go /src working directory and rename file to `main.go`
+- run sample `go run main.go --sensor=<a_sensor_id>` . Open http://deutschland.maps.luftdaten.info/#6/51.165/10.455  and click on a hexagon on the map. This will show id for the related sensor.
