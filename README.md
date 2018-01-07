@@ -1,6 +1,6 @@
-# GO sample code accessing APIs created by the "luftdaten.info" project.
+# GO wrapper code for accessing APIs created by the "luftdaten.info" project.
 
-Sample codes accesses APIs (http://api.luftdaten.info/..) to get fine dust / particulate pollution data collected by a network of sensors.
+Sample code (datamodel, functions) accesses APIs (http://api.luftdaten.info/..) to get fine dust / particulate pollution data collected by a network of sensors.
 
 Full details and all background information is available at [luftdaten.info](http://luftdaten.info) .
 
