@@ -7,7 +7,7 @@
 
 */
 
-package main
+package feinstaubgoapi
 
 import (
 	"fmt"
