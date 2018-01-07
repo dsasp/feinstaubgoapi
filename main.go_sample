@@ -1,0 +1,61 @@
+//
+// Copyright (c) 2018 Dieter Schmidt
+//
+// Sample program to read data for a given sensor.
+//
+// Usage:  go run main.go --sensor=<a_sensor_id>
+//
+
+package main
+
+import (
+	"fmt"
+	"log"
+	"os"
+	"strings"
+
+	fsapi "github.com/dsasp/feinstaubgoapi"
+)
+
+//   Read and display data for given sensor id
+//   Usage: go run main.go --sensor=<sensor_id>
+func main() {
+
+	var apidata []fsapi.APIData
+	var err error
+
+	// get id of sensor passed as cmd line argument
+	sensorId := parseArgsSensorId()
+	if sensorId == "" {
+		fmt.Printf("\n*** You must specify a sensor ID.")
+		fmt.Printf("\n*** Usage:   go run main.go --sensor=<sensor_id>")
+		fmt.Printf("\n*** Example: go run main.go --sensor=1234\n")
+		os.Exit(1)
+	}
+
+	// read and print sensor data
+	requrl := fsapi.UrlSensorAPI_1 + sensorId + "/"
+	apidata, err = fsapi.ReadSensor(requrl)
+	if err != nil {
+		log.Println("Error reading sensor data, url=", requrl, err)
+	}
+	if len(apidata) > 0 {
+		//log.Printf("*** sensor data: %+v\n", apidata[0])
+		fsapi.ShowSensorData(apidata[0])
+	} else {
+		log.Printf("*** NO data found for sensor %s\n", sensorId)
+	}
+}
+
+func parseArgsSensorId() (sensorId string) {
+	const keywordSensor = "--sensor="
+	sensorId = ""
+	// get cmd line args, ignore prog name
+	args := os.Args[1:]
+	for i := 0; i < len(args); i++ {
+		if strings.HasPrefix(args[i], keywordSensor) {
+			sensorId = strings.TrimPrefix(args[i], keywordSensor)
+		}
+	}
+	return sensorId
+}
